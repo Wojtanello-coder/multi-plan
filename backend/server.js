@@ -29,5 +29,4 @@ app.get('/plan', async (req, res) => {
     
     res.json(lessons);
 })
-
 app.listen(4001);
