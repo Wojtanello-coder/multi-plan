@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-
+import Plan from "./Plan";
 import Header from "./Header";
 import Footer from "./Footer";
 //import puppeteer from "puppeteer";
@@ -52,10 +52,18 @@ function Home(){
         <div>
             <Header text="Strona główna"/>
             
-            nic tu nie ma lol
-            {data.map((item, id) => (
-                <a key={id} type="submit" href={item[1]}> {item[0]} </a>
-            ))}
+            <h3 id="button_title">Wybierz klasę / nauczyciela</h3>
+            <div id="buttons">
+                
+                 {data.map((item, id) => (
+                <div>
+                     <a key={id} type="submit" href={item[1]}> {item[0]} </a>
+                     <br/>
+                </div>
+               
+                ))}
+            </div>
+           <Plan class="Tu sie wstawi plan kiedys ok?"/>
             <Link className={"link"} to={"/"}> "Wyloguj"</Link>
             
 
