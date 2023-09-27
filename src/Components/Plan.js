@@ -1,7 +1,9 @@
 function Plan(props){
     return(
         <div id="plan">
-            {props.class}
+            <table>
+                {}
+            </table>
         </div>
     )
 }

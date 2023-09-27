@@ -17,16 +17,22 @@ app.get('/', async (req, res) => {
 app.get('/plan', async (req, res) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto("http://plan.ckziu.jaworzno.pl/?classid=4BEE37BA37491D0A");
-    lessons = (await page.$$eval(".lesson-1,.lesson-2", options => options.map(option => {
+    await page.goto("http://plan.ckziu.jaworzno.pl/?classid=2E8F99F3DA7A10EA");
+    dayLength = (await page.$$eval(".hours", options => options.map(option => {
+        return option.children.length - 1;
+    }) ));
+    lessons = (await page.$$eval(".card", options => options.map(option => { // ".lesson-1,.lesson-2"
         let table = []
-        for (const i in [0,1,2,3]) {
-            table.push(option.children[4].children[0].children[i].innerHTML.trim())
+        
+        for (let j = 0; j < option.children.length; j++) {
+            for (const i in [0,1,2,3]) {
+                table.push(option.children[j].children[4].children[0].children[i].innerHTML.trim())//
+            }
         }
         return table;
     }) ));
     await browser.close();
     
-    res.json(lessons);
+    res.json({ "lesson": lessons, "dayLength": dayLength });
 })
 app.listen(4001);
