@@ -18,15 +18,29 @@ import Footer from "./Footer";
 //         console.log(res);
 //     })
 function Home(){
+    const [classes, setClass] = useState([]);
     const [data, setData] = useState([]);
 
     useEffect(() => {
         FetchData();
     }, []);
 
-    const FetchData = async () => {
+    const FetchClass = async () => {
         try {
             const res = await fetch("http://localhost:4001/");
+            if (!res.ok) {
+                throw new Error('Netowkkrawawbhinafdasd!!!');
+            }
+            
+            let json = await res.json();
+            setClass(json);
+        } catch (e) {
+            console.error(e);
+        }
+    }
+    const FetchData = async () => {
+        try {
+            const res = await fetch("http://localhost:4001/plan");
             if (!res.ok) {
                 throw new Error('Netowkkrawawbhinafdasd!!!');
             }
@@ -55,7 +69,7 @@ function Home(){
             <h3 id="button_title">Wybierz klasę / nauczyciela</h3>
             <div id="buttons">
                 
-                 {data.map((item, id) => (
+                 {classes.map((item, id) => (
                 <div>
                      <a key={id} type="submit" href={item[1]}> {item[0]} </a>
                      <br/>
@@ -63,7 +77,7 @@ function Home(){
                
                 ))}
             </div>
-           <Plan class="Tu sie wstawi plan kiedys ok?"/>
+           <Plan data={data}/>
             <Link className={"link"} to={"/"}> "Wyloguj"</Link>
             
 

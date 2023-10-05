@@ -12,6 +12,7 @@ app.get('/', async (req, res) => {
     await browser.close();
 
     res.json(lessons);
+    console.log(lessons);
 })
 
 app.get('/plan', async (req, res) => {
@@ -34,5 +35,6 @@ app.get('/plan', async (req, res) => {
     await browser.close();
     
     res.json({ "lesson": lessons, "dayLength": dayLength });
+    console.log({ "lesson": lessons, "dayLength": dayLength });
 })
 app.listen(4001);
