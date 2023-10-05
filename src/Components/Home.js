@@ -22,6 +22,7 @@ function Home(){
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        FetchClass();
         FetchData();
     }, []);
 
@@ -70,8 +71,8 @@ function Home(){
             <div id="buttons">
                 
                  {classes.map((item, id) => (
-                <div>
-                     <a key={id} type="submit" href={item[1]}> {item[0]} </a>
+                <div key={id}>
+                     <a type="submit" href={item[1]}> {item[0]} </a>
                      <br/>
                 </div>
                
