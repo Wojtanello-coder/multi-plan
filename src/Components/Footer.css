@@ -1,0 +1,13 @@
+#footer{
+    width: 100%;
+    height: 50px;
+    background-color: #FC9E4F;
+    position: fixed;
+    bottom: 0px;
+}
+#footer img{
+    height: 50px;
+    float: right;
+    position: relative;
+    right: 10px;
+}

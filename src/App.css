@@ -1,7 +1,7 @@
 body{
   width: 100vw;
   height: 100vh;
-  background-color: #F3EB9C;
+  background-color: #F2F3AE;
 }
 *{
   padding: 0;
@@ -11,7 +11,6 @@ body{
 #form{
   padding: 25px;
   text-align: center;
-  /* background-color: #00000030; */
   width: 500px;
   margin:75px auto;
 }

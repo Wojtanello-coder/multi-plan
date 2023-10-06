@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
 app.get('/plan', async (req, res) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto("http://plan.ckziu.jaworzno.pl/?classid=2E8F99F3DA7A10EA");
+    await page.goto("http://plan.ckziu.jaworzno.pl/?classid=BF0B9B0E2C34F558");
     dayLength = (await page.$$eval(".hours", options => options.map(option => {
         return option.children.length - 1;
     }) ));

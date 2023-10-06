@@ -1,10 +1,10 @@
-import './Comps.css';
+import './Footer.css';
 import logo from './logo.png';
 
 function Footer(){
     return(
         <div id='footer'>
-            stupka :33333333
+            made by wj ms and kk ckziu
             <a href='http://ckziu.jaworzno.pl' target='_blank'>
                 <img src={logo}/>
             </a>

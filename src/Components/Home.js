@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+import "./Comps.css";
 import Plan from "./Plan";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -622,68 +623,322 @@ function Home(){
     ]);
     const [data, setData] = useState({
         "lesson": [
-            [],
-            [],
-            [],
-            [],
-            [],
             [
-                "Plewko-Kotynia Magdalena",
-                "205/II",
-                "zajęcia rewalidacyjne",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - backend",
+                "1. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - backend",
+                "1. Grupa"
+            ],
+            [
+                "Stawska Ewelina",
+                "1/II",
+                "język angielski",
+                "2. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - backend",
+                "1. Grupa"
+            ],
+            [
+                "Stawska Ewelina",
+                "1/II",
+                "język angielski",
+                "2. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - backend",
+                "1. Grupa"
+            ],
+            [
+                "Łoś Jacek",
+                "aula",
+                "historia",
                 "Cała klasa"
             ],
             [
-                "Plewko-Kotynia Magdalena",
-                "205/II",
-                "zajęcia rewalidacyjne",
-                "Cała klasa"
+                "Proksa Łukasz",
+                "sg",
+                "wychowanie fizyczne",
+                "1. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - backend",
+                "2. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - backend",
+                "2. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - backend",
+                "2. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - backend",
+                "2. Grupa"
             ],
             [],
             [],
-            [],
-            [],
-            [],
-            [],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - frontend",
+                "1. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - frontend",
+                "1. Grupa"
+            ],
+            [
+                "Budka Agata",
+                "sg",
+                "wychowanie fizyczne",
+                "2. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - frontend",
+                "1. Grupa"
+            ],
+            [
+                "Budka Agata",
+                "sg",
+                "wychowanie fizyczne",
+                "2. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - frontend",
+                "1. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "zajęcia z wychowawcą",
+                "Cała klasa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - frontend",
+                "2. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - frontend",
+                "2. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - frontend",
+                "2. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P frameworki webowe - frontend",
+                "2. Grupa"
+            ],
             [],
             [
-                "Klimek Małgorzata",
-                "201/V",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji mobilnych",
+                "2. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji desktopowych",
+                "2. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji desktopowych",
+                "2. Grupa"
+            ],
+            [
+                "Budka Agata",
+                "sg",
+                "wychowanie fizyczne",
+                "2. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji mobilnych",
+                "1. Grupa"
+            ],
+            [
+                "Pelc Katarzyna",
+                "111/V",
+                "język hiszpański",
+                "jh",
+                "Margielewska-Gromadka Joanna",
+                "2/II",
+                "język niemiecki",
+                "jn"
+            ],
+            [
+                "Papaj Janusz",
+                "211/V",
+                "język angielski",
+                "1. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji mobilnych",
+                "2. Grupa"
+            ],
+            [
+                "Papaj Janusz",
+                "211/V",
+                "język angielski",
+                "1. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji mobilnych",
+                "2. Grupa"
+            ],
+            [
+                "Proksa Łukasz",
+                "sg",
+                "wychowanie fizyczne",
+                "1. Grupa",
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji mobilnych",
+                "2. Grupa"
+            ],
+            [
+                "Proksa Łukasz",
+                "sg",
+                "wychowanie fizyczne",
+                "1. Grupa"
+            ],
+            [],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji desktopowych",
+                "1. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji desktopowych",
+                "1. Grupa"
+            ],
+            [
+                "Dąbek-Nagacz Mariola",
+                "3/III",
                 "matematyka",
                 "Cała klasa"
             ],
             [
-                "Klimek Małgorzata",
-                "201/V",
+                "Dąbek-Nagacz Mariola",
+                "3/III",
                 "matematyka",
                 "Cała klasa"
             ],
             [
-                "Klimek Małgorzata",
-                "201/V",
-                "matematyka",
+                "Dobosz Łukasz",
+                "1/V",
+                "język polski",
+                "Cała klasa"
+            ],
+            [
+                "Dobosz Łukasz",
+                "1/V",
+                "język polski",
+                "Cała klasa"
+            ],
+            [
+                "Papaj Janusz",
+                "211/V",
+                "język angielski R",
+                "1. Grupa",
+                "Stawska Ewelina",
+                "1/II",
+                "język angielski R",
+                "2. Grupa"
+            ],
+            [
+                "Dobosz Łukasz",
+                "1/V",
+                "godz. dyr.",
                 "Cała klasa"
             ],
             [],
             [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
+            [
+                "Długajczyk Dorota",
+                "3/I",
+                "religia",
+                "rel"
+            ],
+            [
+                "Długajczyk Dorota",
+                "3/I",
+                "religia",
+                "rel"
+            ],
+            [
+                "Rachwalik Mirosława",
+                "107/II",
+                "wiedza o społeczeństwie",
+                "Cała klasa"
+            ],
+            [
+                "Dobosz Łukasz",
+                "1/V",
+                "język polski",
+                "Cała klasa"
+            ],
+            [
+                "Łoś Jacek",
+                "14/III",
+                "historia",
+                "Cała klasa"
+            ],
+            [
+                "Dąbek-Nagacz Mariola",
+                "3/III",
+                "matematyka",
+                "Cała klasa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji mobilnych",
+                "1. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji mobilnych",
+                "1. Grupa"
+            ],
+            [
+                "Bubak Włodzimierz",
+                "105/V",
+                "z-P programowanie aplikacji mobilnych",
+                "1. Grupa"
+            ]
         ],
-        "dayLength": 7
+        "dayLength": 10
     });
 
     // useEffect(() => {
@@ -743,7 +998,7 @@ function Home(){
                
                 ))}
             </div>
-           <Plan data={data}/>
+            <Plan data={data}/>
             <Link className={"link"} to={"/"}> "Wyloguj"</Link>
             
 
