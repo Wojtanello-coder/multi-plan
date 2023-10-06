@@ -33,7 +33,7 @@ app.get('/plan', async (req, res) => {
         return table;
     }) ));
     await browser.close();
-    
+    dayLength = dayLength[0];
     res.json({ "lesson": lessons, "dayLength": dayLength });
     console.log({ "lesson": lessons, "dayLength": dayLength });
 })
