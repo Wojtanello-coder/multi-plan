@@ -988,6 +988,7 @@ function Home(){
             <Header text="Strona główna"/>
             
             <h3 id="button_title">Wybierz klasę / nauczyciela</h3>
+            
             <div id="buttons">
                 
                  {classes.map((item, id) => (
@@ -998,9 +999,14 @@ function Home(){
                
                 ))}
             </div>
-            <Plan data={data}/>
-            <Link className={"link"} to={"/"}> "Wyloguj"</Link>
             
+            <br/>
+
+            <Link className={"link"} id="logout" to={"/"}>
+                <button>"Wyloguj lol"</button>
+            </Link>
+
+            <Plan data={data} id="planbox"/>
 
             <Footer/>
         </div>

@@ -12,7 +12,7 @@ body{
   padding: 25px;
   text-align: center;
   width: 500px;
-  margin:75px auto;
+  margin: 5vh auto;
 }
 #form *{
   margin: 10px;
@@ -27,4 +27,11 @@ body{
   width: 250px;
   padding: 0 25px;
   height: 20px;
+}
+
+#logout{
+  position: absolute;
+  left: 20px;
+  bottom: 100px;
+
 }

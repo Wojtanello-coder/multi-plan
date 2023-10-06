@@ -5,14 +5,14 @@
 #button_title{
     text-align: center;
     width: 300px;
-    background-color: #F4442Eaa;
+    background-color: #F4442E90;
     padding: 10px;
     margin: 10px 10px 0 10px;
 }
 #buttons{
     display: inline-block;
     width: 300px;
-    background-color: #F4442E60;
+    background-color: #F4442E40;
     height: 400px;
     margin: 0 10px 10px 10px;
     padding: 10px;
@@ -38,17 +38,33 @@
     width: 80%;
 }
 
-
-#plan{
-    position: absolute;
-    top: 100px;
-    right: 0px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #fff;
-    width: 800px;
-    height: 500px;
+@media only screen and (max-width: 1000px){
+    #plan{
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+        width: 400px;
+        height: 300px;
+    }
+    
 }
+@media only screen and (min-width: 1000px){
+    #plan{
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+        width: 800px;
+        height: 500px;
+    }
+
+}
+
 
 .link{
     text-decoration: none;

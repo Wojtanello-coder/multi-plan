@@ -1,3 +1,5 @@
+import "./Comps.css";
+
 function Plan(props){
     console.log(props.data)
 
@@ -29,7 +31,7 @@ function Plan(props){
             {props.data.lesson}
             <table>
                 <tbody>
-                    
+                  
                 </tbody>
             </table>
         </div>
