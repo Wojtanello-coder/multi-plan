@@ -35,7 +35,25 @@ function Plan(props){
                         <tr key={id}>
                             {row.map((cell, id) => (
                                 <td key={id}>
-                                    {cell[0]}
+                                    {cell.length==4?(
+                                        <div>
+                                            {cell[0]} <hr/>
+                                            {cell[1]} <hr/>
+                                            {cell[2]} <hr/>
+                                            {cell[3]}
+                                        </div>
+                                    ):(
+                                        <div>
+                                            {cell[0]} <hr/>
+                                            {cell[1]} <hr/>
+                                            {cell[2]} <hr/>
+                                            {cell[3]} <hr/> <hr/>
+                                            {cell[4]} <hr/>
+                                            {cell[5]} <hr/>
+                                            {cell[6]} <hr/>
+                                            {cell[7]}
+                                        </div>
+                                    )}
                                 </td>
                             ))}
                         </tr>
