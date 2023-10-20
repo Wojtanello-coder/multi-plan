@@ -3,7 +3,7 @@
     height: 50px;
     background-color: #303030;
     color: #fff;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
 }
 #footer img{

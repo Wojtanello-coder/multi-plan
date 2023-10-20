@@ -1,4 +1,5 @@
 import "./Comps.css";
+import "./Plan.css";
 
 function Plan(props){
     console.log(props.data)
@@ -26,33 +27,53 @@ function Plan(props){
     //         table.push(<tr> {tds} </tr>);
     //     }
     // }
+
     return(
         <div id="plan">
             {/* {JSON.stringify(props.data)} */}
             <table>
                 <tbody>
+                    
                     {newArr.map((row, id) => (
                         <tr key={id}>
                             {row.map((cell, id) => (
                                 <td key={id}>
                                     {cell.length==4?(
-                                        <div>
-                                            {cell[0]} <hr/>
-                                            {cell[1]} <hr/>
-                                            {cell[2]} <hr/>
-                                            {cell[3]}
+                                        // JEDNA GRUPA
+                                        <div className="plan_cell">
+                                            {/* imie i nazwisko */}
+                                            <span className="name">{cell[0]}  </span>
+                                            {/* sala */}
+                                            <span className="room">{cell[1]}</span><br/>
+                                            {/* przedmiot */}
+                                            <span className="subj">{cell[2]}</span><br/>
+                                            {/* grupy */}
+                                            <span className="group">{cell[3]}</span>
                                         </div>
                                     ):(
+                                        // DWIE GRUPY
                                         <div>
-                                            {cell[0]} <hr/>
-                                            {cell[1]} <hr/>
-                                            {cell[2]} <hr/>
-                                            {cell[3]} <hr/> <hr/>
-                                            {cell[4]} <hr/>
-                                            {cell[5]} <hr/>
-                                            {cell[6]} <hr/>
-                                            {cell[7]}
+                                        <div className="plan_cell_double">
+                                            {/* imie i nazwisko */}
+                                            <span className="name">{cell[0]}  </span>
+                                            {/* sala */}
+                                            <span className="room">{cell[1]}</span><br/>
+                                            {/* przedmiot */}
+                                            <span className="subj">{cell[2]}</span><br/>
+                                            {/* grupa */}
+                                            <span className="group">{cell[3]}</span><br/>
                                         </div>
+                                        <div className="plan_cell_double">
+                                            {/* imie i nazwisko */}
+                                            <span className="name">{cell[4]}  </span>
+                                            {/* sala */}
+                                            <span className="room">{cell[5]}</span><br/>
+                                            {/* przedmiot */}
+                                            <span className="subj">{cell[6]}</span><br/>
+                                            {/* grupa */}
+                                            <span className="group">{cell[7]}</span>
+                                        </div>
+                                        </div>  
                                     )}
                                 </td>
                             ))}

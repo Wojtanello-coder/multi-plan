@@ -1,0 +1,49 @@
+@media only screen and (max-width: 1000px){
+    #plan{
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+        width: 60vw;
+        height: 300px;
+    }
+    
+}
+@media only screen and (min-width: 1000px){
+    #plan{
+        position: absolute;
+        top: 120px;
+        right: 0px;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+        width: 70vw;
+        height: 700px;
+    }
+
+}
+
+#plan .plan_cell{
+    font-size: 12px;
+    /* background-color: aquamarine; */
+    background-color: lightblue;
+    height: 150px
+}
+#plan .plan_cell_double{
+    font-size: 12px;
+    /* background-color: aquamarine; */
+    background-color: lightcoral;
+    height: 75px
+}
+
+.name{
+    text-transform: uppercase;
+    height: 10px;
+    font-size: 10px;
+    /* background-color: gold; */
+}
+.subj{
+    text-transform: capitalize;
+}

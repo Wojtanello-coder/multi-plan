@@ -38,33 +38,6 @@
     width: 80%;
 }
 
-@media only screen and (max-width: 1000px){
-    #plan{
-        position: absolute;
-        top: 100px;
-        right: 0px;
-        padding: 10px;
-        margin: 10px;
-        background-color: #fff;
-        width: 400px;
-        height: 300px;
-    }
-    
-}
-@media only screen and (min-width: 1000px){
-    #plan{
-        position: absolute;
-        top: 100px;
-        right: 0px;
-        padding: 10px;
-        margin: 10px;
-        background-color: #fff;
-        width: 800px;
-        height: 500px;
-    }
-
-}
-
 
 .link{
     text-decoration: none;
