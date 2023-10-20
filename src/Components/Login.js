@@ -1,18 +1,21 @@
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
  
 function Login(){
+    const nav = useNavigate();
 
     const login = () => {
-        let login = document.getElementById('login_name').value;
         let pass = document.getElementById('login_password').value;
-
+        let password = "qwe";
         console.log("LOGIN: ", login, "  ", "PASSWORD: ", pass);
 
-        if(login == "" || pass == "") document.getElementById('error').textContent = "Wypełnij wszystkie pola";
-        else document.getElementById('error').textContent = null;
+        if(pass == "") document.getElementById('error').textContent = "Podaj hasło >:(";
+        if(pass == password){
+            
+            nav('/qweasd');
+        }
     }
 
     return(
@@ -20,18 +23,12 @@ function Login(){
             <Header text="Zaloguj się"/>
 
             <div id='form'>
-                <input type='text' id='login_name' placeholder='Podaj login'/><br/>
                 <input type='password' id='login_password' placeholder='Podaj hasło'/>
 
                 <br/>
-                <button onClick={login}>TEMP</button>
-                <Link className={'link'} to={'/qweasd'}>
-                    <button>"Zaloguj się"</button>
-                </Link>
+                <button onClick={login}>Zaloguj</button>
                 <br/>
-                <Link className={'link'} to={'/register'}>
-                    <button>Rejestracja</button>
-                </Link> <br/>
+                
                 <span id='error'></span>
             </div>
             
