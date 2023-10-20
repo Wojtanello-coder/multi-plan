@@ -31,15 +31,15 @@ function Plan(props){
             {/* {JSON.stringify(props.data)} */}
             <table>
                 <tbody>
-                    {newArr.map((row, id) => {
+                    {newArr.map((row, id) => (
                         <tr key={id}>
-                            {row.map((cell, id) => {
-                                <td>
+                            {row.map((cell, id) => (
+                                <td key={id}>
                                     {cell[0]}
                                 </td>
-                            })}
+                            ))}
                         </tr>
-                    })}
+                    ))}
                 </tbody>
             </table>
         </div>
