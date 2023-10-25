@@ -2,18 +2,23 @@ import {Link, useNavigate} from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
+import { useState } from 'react';
  
-function Login(){
+function Login(props){
+
     const nav = useNavigate();
+
+    const [logged, setLogged] = useState(false);
 
     const login = () => {
         let pass = document.getElementById('login_password').value;
         let password = "qwe";
         console.log("LOGIN: ", login, "  ", "PASSWORD: ", pass);
 
-        if(pass == "") document.getElementById('error').textContent = "Podaj hasło >:(";
-        if(pass == password){
-            
+        if(pass === "") document.getElementById('error').textContent = "Podaj hasło >:(";
+        if(pass === password){
+            setLogged(true);
+            props.onSaveInnerData(true)
             nav('/qweasd');
         }
     }
