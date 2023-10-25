@@ -4,7 +4,9 @@ function Plan(props){
     console.log(props.data)
 
     const newArr = [];
-    while(props.data.lesson.length) newArr.push(props.data.lesson.splice(0,props.data.dayLength));
+    if(props.data.lesson){
+        while(props.data.lesson.length) newArr.push(props.data.lesson.splice(0,props.data.dayLength));
+    }
         
     console.log(newArr);
     //let table = new Array(props.data.dayLength);
@@ -31,15 +33,33 @@ function Plan(props){
             {/* {JSON.stringify(props.data)} */}
             <table>
                 <tbody>
-                    {newArr.map((row, id) => {
+                    {newArr.map((row, id) => (
                         <tr key={id}>
-                            {row.map((cell, id) => {
-                                <td>
-                                    {cell[0]}
+                            {row.map((cell, id) => (
+                                <td key={id}>
+                                    {cell.length==4?(
+                                        <div>
+                                            {cell[0]} <hr/>
+                                            {cell[1]} <hr/>
+                                            {cell[2]} <hr/>
+                                            {cell[3]}
+                                        </div>
+                                    ):(
+                                        <div>
+                                            {cell[0]} <hr/>
+                                            {cell[1]} <hr/>
+                                            {cell[2]} <hr/>
+                                            {cell[3]} <hr/> <hr/>
+                                            {cell[4]} <hr/>
+                                            {cell[5]} <hr/>
+                                            {cell[6]} <hr/>
+                                            {cell[7]}
+                                        </div>
+                                    )}
                                 </td>
-                            })}
+                            ))}
                         </tr>
-                    })}
+                    ))}
                 </tbody>
             </table>
         </div>
