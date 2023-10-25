@@ -11,10 +11,12 @@ import { useState } from 'react';
 
 
 function App() {
-  console.log('root here');
+  console.log(':3');
 
+  // state of if user is logged
   const [logged, setLogged] = useState(false);
   
+  // check if logged from login page
   const InnerHandler = (entered) => {
     console.log("!!!");
     console.log(entered);
@@ -24,9 +26,10 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
+      {/* empty url leads to login page */}
       <Route path='/' element={<Login onSaveInnerData = {InnerHandler}/>}/>
-      {/* <Route path='/register' element={<Register/>}/> */}
 
+      {/* send to homepage when logged, send to login when not logged */}
       {logged?(
         <Route path='/qweasd' element={<Home/>}></Route>
       ):(
