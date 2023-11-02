@@ -27,25 +27,35 @@
         width: 70vw;
         /* height: 600px; */
     }
+}
 
+#plan{
+    border: 2px black solid;
+}
+#plan *{
+    border-collapse: collapse;
 }
 
 #plan .plan_cell{
     font-size: 12px;
-    /* background-color: aquamarine; */
     background-color: lightblue;
     height: 100px;
     width: 100px;
-    border: 1px black solid;
 }
 #plan .plan_cell_double{
     font-size: 12px;
     background-color: aquamarine;
-    /* background-color: lightcoral; */
     height: 50px;
     width: 100px;
-    border: 1px black solid;
 }
+
+.cell_border{
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+
+
 
  
 
