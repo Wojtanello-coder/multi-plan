@@ -36,13 +36,13 @@
     border-collapse: collapse;
 }
 
-#plan .plan_cell{
+.plan_cell{
     font-size: 12px;
     background-color: lightblue;
     height: 100px;
     width: 100px;
 }
-#plan .plan_cell_double{
+.plan_cell_double{
     font-size: 12px;
     background-color: aquamarine;
     height: 50px;
@@ -55,16 +55,19 @@
 }
 
 
-
-
- 
-
-.name{
-    text-transform: uppercase;
-    height: 10px;
-    font-size: 10px;
-    /* background-color: gold; */
-}
 .subj{
     text-transform: capitalize;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    float: left;
+    
+}
+.classroom{
+    display: inline-block;
+    float: left;
+}
+.group{
+    display: inline-block;
+    float: right;
 }

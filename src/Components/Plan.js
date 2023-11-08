@@ -23,6 +23,12 @@ function Plan(props){
         return result;
     }
 
+    function Grouper(x){
+        if(x == "1. Grupa") return "g1";
+        if(x == "2. Grupa") return "g2";
+        else return "";
+    }
+
     return(
         <div id="plan">
  
@@ -37,35 +43,47 @@ function Plan(props){
                                     {/* dont display empty cells */}
                                     {cell.length==0?(<div/>):(
                                     cell.length==4?(
+
                                         // JEDNA GRUPA
                                         <div className="cell_border">
                                             <div className="plan_cell">
-                                                {/* przedmiot */}
-                                                <span className="subj">{LessonShorten(cell[2])}</span><br/>
                                                 {/* grupy */}
-                                                <span className="group">{cell[3]}</span><br/>
-                                                <span classname="classroom">{cell[1]}</span>
+                                                <p className="group">{Grouper(cell[3])}</p>
+                                                {/* sala */}
+                                                <p classname="classroom">{cell[1]}</p>
+                                                {/* przedmiot */}
+                                                <br/>
+                                                {/* <p className="subj">{LessonShorten(cell[2])}</p> */}
+                                                <p className="subj">{cell[2]}</p>
+                                                {/* <p className="teacher">{cell[0]}</p> */}
+                                                
                                             </div>
                                         </div>
                                         
                                     ):(
+
                                         // DWIE GRUPY
                                         <div className="cell_border">
                                             <div className="plan_cell_double">
-                                                {/* przedmiot */}
-                                                <span className="subj">{LessonShorten(cell[2])}</span><br/>
+                                                
                                                 {/* grupa */}
-                                                <span className="group">{cell[3]}</span><br/>
-                                                <span className="classroom">{cell[1]}</span>
+                                                <p className="group">{Grouper(cell[3])}</p>
+                                                {/* sala */}
+                                                <p className="classroom">{cell[1]}</p>
+                                                {/* przedmiot */}
+                                                <p className="subj">{LessonShorten(cell[2])}</p>
                                             </div>
                                             <div className="plan_cell_double">
-                                                {/* przedmiot */}
-                                                <span className="subj">{LessonShorten(cell[6])}</span><br/>
+                                                
                                                 {/* grupa */}
-                                                <span className="group">{cell[7]}</span><br/>
-                                                <span className="classroom">{cell[5]}</span>
+                                                <p className="group">{Grouper(cell[7])}</p>
+                                                {/* sala */}
+                                                <p className="classroom">{cell[5]}</p>
+                                                {/* przedmiot */}
+                                                <p className="subj">{LessonShorten(cell[6])}</p>
                                             </div>
                                         </div>  
+
                                     )
                                     )}
                                     
