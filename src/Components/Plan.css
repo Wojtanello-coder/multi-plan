@@ -44,9 +44,14 @@
 }
 .plan_cell_double{
     font-size: 12px;
-    background-color: aquamarine;
     height: 50px;
     width: 100px;
+}
+.double1{
+    background-color: cornflowerblue;
+}
+.double2{
+    background-color: aquamarine;
 }
 
 .cell_border{
@@ -55,19 +60,24 @@
 }
 
 
-.subj{
+.cell_header{
+    height: 20px;
+    background-color: #00000020;
+    display: flex;
+    justify-content: space-around;
+}
+.cell_body1{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: capitalize;
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    float: left;
-    
 }
-.classroom{
-    display: inline-block;
-    float: left;
+.cell_body2{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
 }
-.group{
-    display: inline-block;
-    float: right;
-}
+

@@ -9,7 +9,9 @@ function Plan(props){
     const newArr = [];
     while(props.data.lesson.length) newArr.push(props.data.lesson.splice(0,props.data.dayLength));
 
-    function LessonShorten(x){
+
+    // skraca stringa
+    function Shorten(x){
         let result = x[0];
         let flag = false;
         for(let i = 0; i < x.length; i++){
@@ -23,9 +25,11 @@ function Plan(props){
         return result;
     }
 
+    // wypis grupy
     function Grouper(x){
         if(x == "1. Grupa") return "g1";
         if(x == "2. Grupa") return "g2";
+        if(x == "Cała klasa") return "ck";
         else return "";
     }
 
@@ -47,16 +51,18 @@ function Plan(props){
                                         // JEDNA GRUPA
                                         <div className="cell_border">
                                             <div className="plan_cell">
-                                                {/* grupy */}
-                                                <p className="group">{Grouper(cell[3])}</p>
-                                                {/* sala */}
-                                                <p classname="classroom">{cell[1]}</p>
-                                                {/* przedmiot */}
-                                                <br/>
-                                                {/* <p className="subj">{LessonShorten(cell[2])}</p> */}
-                                                <p className="subj">{cell[2]}</p>
-                                                {/* <p className="teacher">{cell[0]}</p> */}
-                                                
+                                                <div className="cell_header">
+                                                    {/* grupy */}
+                                                    <p className="group">{Grouper(cell[3])}</p>
+                                                    {/* Nauczyciel */}
+                                                    <p classname="teacher">{Shorten(cell[0])}</p>
+                                                    {/* sala */}
+                                                    <p classname="classroom">{cell[1]}</p>
+                                                </div>
+                                                <div className="cell_body1">
+                                                    {/* przedmiot */}
+                                                    <p className="subj">{Shorten(cell[2])}</p>
+                                                </div>          
                                             </div>
                                         </div>
                                         
@@ -64,23 +70,36 @@ function Plan(props){
 
                                         // DWIE GRUPY
                                         <div className="cell_border">
-                                            <div className="plan_cell_double">
+                                            <div className="plan_cell_double double1">
+                                                <div className="cell_header">
+                                                    {/* grupa */}
+                                                    <p className="group">{Grouper(cell[3])}</p>
+                                                    {/* nauczyciel */}
+                                                    <p className="teacher">{Shorten(cell[0])}</p>
+                                                    {/* sala */}
+                                                    <p className="classroom">{cell[1]}</p>
+                                                </div>
+                                                <div className="cell_body2">
+                                                    {/* przedmiot */}
+                                                    <p className="subj">{Shorten(cell[2])}</p>
+                                                </div>
+                                            
                                                 
-                                                {/* grupa */}
-                                                <p className="group">{Grouper(cell[3])}</p>
-                                                {/* sala */}
-                                                <p className="classroom">{cell[1]}</p>
-                                                {/* przedmiot */}
-                                                <p className="subj">{LessonShorten(cell[2])}</p>
                                             </div>
-                                            <div className="plan_cell_double">
+                                            <div className="plan_cell_double double2">
                                                 
-                                                {/* grupa */}
-                                                <p className="group">{Grouper(cell[7])}</p>
-                                                {/* sala */}
-                                                <p className="classroom">{cell[5]}</p>
-                                                {/* przedmiot */}
-                                                <p className="subj">{LessonShorten(cell[6])}</p>
+                                                <div className="cell_header">
+                                                    {/* grupa */}
+                                                    <p className="group">{Grouper(cell[7])}</p>
+                                                    {/* Nauczyciel */}
+                                                    <p className="teacher">{Shorten(cell[4])}</p>
+                                                    {/* sala */}
+                                                    <p className="classroom">{cell[5]}</p>
+                                                </div>
+                                                <div className="cell_body2">
+                                                    {/* przedmiot */}
+                                                    <p className="subj">{Shorten(cell[6])}</p>
+                                                </div>
                                             </div>
                                         </div>  
 
