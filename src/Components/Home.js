@@ -1008,7 +1008,7 @@ function Home(){
 
             <Plan data={data} id="planbox"/>
 
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     )
 }

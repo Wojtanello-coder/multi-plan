@@ -1,0 +1,83 @@
+*{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+@media only screen and (max-width: 1000px){
+    #plan{
+        position: absolute;
+        top: 100px;
+        right: 5px;
+        padding: 10px;
+        margin: 10px;
+        /* background-color: #000; */
+        width: 60vw;
+        /* height: 600px; */
+    }
+    
+}
+@media only screen and (min-width: 1000px){
+    #plan{
+        position: absolute;
+        top: 120px;
+        right: 5px;
+        padding: 10px;
+        margin: 10px;
+        /* background-color: #000; */
+        width: 70vw;
+        /* height: 600px; */
+    }
+}
+
+#plan{
+    border: 2px black solid;
+}
+#plan *{
+    border-collapse: collapse;
+}
+
+.plan_cell{
+    font-size: 12px;
+    background-color: lightblue;
+    height: 100px;
+    width: 100px;
+}
+.plan_cell_double{
+    font-size: 12px;
+    height: 50px;
+    width: 100px;
+}
+.double1{
+    background-color: cornflowerblue;
+}
+.double2{
+    background-color: aquamarine;
+}
+
+.cell_border{
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+
+.cell_header{
+    height: 20px;
+    background-color: #00000020;
+    display: flex;
+    justify-content: space-around;
+}
+.cell_body1{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.cell_body2{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
