@@ -1,4 +1,4 @@
-import "./Comps.css";
+// import "./Comps.css";
 import "./Plan.css";
 
 import { useState } from "react";

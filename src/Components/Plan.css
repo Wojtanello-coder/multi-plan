@@ -38,7 +38,7 @@
 
 .plan_cell{
     font-size: 12px;
-    background-color: lightblue;
+    background-color: white;
     height: 100px;
     width: 100px;
 }
@@ -48,10 +48,10 @@
     width: 100px;
 }
 .double1{
-    background-color: cornflowerblue;
+    background-color: whitesmoke;
 }
 .double2{
-    background-color: aquamarine;
+    background-color: whitesmoke;
 }
 
 .cell_border{
@@ -78,6 +78,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: capitalize;
 }
 

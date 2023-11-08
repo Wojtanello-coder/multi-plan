@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import { useState } from 'react';
+import '../App.css';
  
 function Login(props){
 
@@ -30,13 +31,12 @@ function Login(props){
             <Header text="Zaloguj się"/>
 
             <div id='form'>
-                <input type='password' id='login_password' placeholder='Podaj hasło'/>
-
-                <br/>
-                <button onClick={login}>Zaloguj</button>
-                <br/>
+                <div>
+                    <input type='password' id='login_password' placeholder='Podaj hasło'/><br/>
+                    <button onClick={login}>Zaloguj</button><br/>
+                    <span id='error'></span>
+                </div>
                 
-                <span id='error'></span>
             </div>
             
 
