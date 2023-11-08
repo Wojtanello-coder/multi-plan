@@ -23,25 +23,8 @@ function Plan(props){
         return result;
     }
 
-    const [teacher, setTeacher] = useState("Nikt lol");
-    const [subject, setSubject] = useState("picie piwa na ocene");
-    const [room, setRoom] = useState("w dupie");
-    const [group, setGroup] = useState("g1");
-
-    function GetDataToDisplay(){
-       
-    }
-
     return(
         <div id="plan">
-
-            {/* <button onClick={GetDataToDisplay("lolo mariolo", "matma", "3/3", "cała klasa")}>LOLOLOL GUZIK</button>
-            <div>
-                {teacher} <br/>
-                {subject} <br/>
-                {room} <br/>
-                {group} <br/>
-            </div> */}
  
             {/* {JSON.stringify(props.data)} */}
             <table>
@@ -60,7 +43,8 @@ function Plan(props){
                                                 {/* przedmiot */}
                                                 <span className="subj">{LessonShorten(cell[2])}</span><br/>
                                                 {/* grupy */}
-                                                <span className="group">{cell[3]}</span>
+                                                <span className="group">{cell[3]}</span><br/>
+                                                <span classname="classroom">{cell[1]}</span>
                                             </div>
                                         </div>
                                         
@@ -71,13 +55,15 @@ function Plan(props){
                                                 {/* przedmiot */}
                                                 <span className="subj">{LessonShorten(cell[2])}</span><br/>
                                                 {/* grupa */}
-                                                <span className="group">{cell[3]}</span>
+                                                <span className="group">{cell[3]}</span><br/>
+                                                <span className="classroom">{cell[1]}</span>
                                             </div>
                                             <div className="plan_cell_double">
                                                 {/* przedmiot */}
                                                 <span className="subj">{LessonShorten(cell[6])}</span><br/>
                                                 {/* grupa */}
-                                                <span className="group">{cell[7]}</span>
+                                                <span className="group">{cell[7]}</span><br/>
+                                                <span className="classroom">{cell[5]}</span>
                                             </div>
                                         </div>  
                                     )
