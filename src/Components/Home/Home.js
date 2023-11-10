@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import "./Comps.css";
-import Plan from "./Plan";
-import Header from "./Header";
-import Footer from "./Footer";
+import "./Home.css";
+import Plan from "../Plan/Plan";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function Home(){
     const [classes, setClass] = useState([
@@ -953,7 +953,7 @@ function Home(){
 
             <Plan data={data} id="planbox"/>
 
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     )
 }

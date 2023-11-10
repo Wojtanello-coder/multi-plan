@@ -1,9 +1,9 @@
 import {useNavigate} from 'react-router-dom';
 
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import { useState } from 'react';
-import '../App.css';
+import './Login.css';
  
 function Login(props){
 
