@@ -11,11 +11,15 @@ import { useState } from 'react';
 
 
 function App() {
+  console.log(':3');
+
   // state of if user is logged
   const [logged, setLogged] = useState(false);
   
   // check if logged from login page
   const InnerHandler = (entered) => {
+    console.log("!!!");
+    console.log(entered);
     if(entered) setLogged(true);
 }
 

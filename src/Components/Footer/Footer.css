@@ -6,14 +6,6 @@
     position: absolute;
     bottom: 0px;
 }
-
-#footer p{
-    display: inline-block;
-    position: relative;
-    left: 50px;
-    top: 10px;
-}
-
 #footer img{
     height: 50px;
     float: right;
