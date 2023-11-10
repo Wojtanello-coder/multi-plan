@@ -933,29 +933,34 @@ function Home(){
 
             <Header text="Strona główna"/>
             {/* qwe */}
-            <h3 id="button_title">Wybierz klasę / nauczyciela</h3>
-            
-            <div id="buttons">
-                
-                 {classes.map((item, id) => (
-                <div key={id}>
-                     <a type="submit" href={item[1]}> {item[0]} </a>
-                     <br/>
+
+            <div id="picklist">
+                <h3 id="list_title">Wybierz klasę / nauczyciela</h3>
+                <div id="list">
+
+                     {classes.map((item, id) => (
+                    <div key={id}>
+                         <a type="submit" href={item[1]}> {item[0]} </a>
+                         <br/>
+                    </div>
+
+                    ))}
                 </div>
-               
-                ))}
+            </div>
+            
+            <br/>
+
+            <div id="planbox">
+                <Plan data={data}/>
             </div>
 
-            
             <br/>
 
             <Link className={"link"} id="logout" to={"/"}>
                 <button>"Wyloguj lol"</button>
             </Link>
 
-            <Plan data={data} id="planbox"/>
-
-            <Footer/>
+            {/* <Footer/> */}
 
         </div>
     )

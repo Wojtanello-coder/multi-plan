@@ -1,19 +1,48 @@
-#button_title{
+@media only screen and (min-width: 1200px){
+    #picklist{
+        display: inline-block;
+        position: relative;
+        /* float: left; */
+        top: 50px;
+        left: 25px;
+        width: 300px;
+    }
+    #planbox{
+        display: inline-block;
+        /* float: right; */
+        background-color: violet;
+    }
+}
+@media only screen and (max-width: 1199px){
+    #picklist{
+        display: block;
+        width: 40vw;
+        min-width: 300px;
+        margin: 50px 30vw 0 30vw !important;
+    }
+    #planbox{
+        display: block; 
+        background-color: violet;
+    }
+    .link{
+        display: block;
+        /* TY KURWO GUZIKOWSKA */
+    }
+}
+
+
+
+#list_title{
     text-align: center;
-    width: 300px;
+    width: 100%;
     height: 25px;
     background-color: #404040;
     color: #fff;
-    position: absolute;
-    top: 150px;
-    padding: 10px;
     margin: 10px 10px 0 10px;
 }
-#buttons{
+#list{
     display: inline-block;
-    position: absolute;
-    top: 175px;
-    width: 300px;
+    width: 100%;
     background-color: #ffffff50;
     height: 400px;
     margin: 0 10px 10px 10px;
@@ -21,7 +50,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-#buttons *{
+#list *{
     /* padding: 2px; */
     width: 100%;
     text-align: center;
@@ -29,14 +58,14 @@
     text-decoration: none;
     
 }
-#buttons div:first-child{
+#list div:first-child{
     border: none;
 }
-#buttons > *{
+#list > *{
     border-top: 1px #000 solid;
 }
 
-#buttons div{
+#list div{
     margin: 0 10% !important;
     width: 80%;
 }
