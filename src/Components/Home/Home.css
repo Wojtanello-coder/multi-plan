@@ -1,4 +1,4 @@
-#button_title{
+#list_title{
     text-align: center;
     width: 300px;
     height: 25px;
@@ -6,12 +6,15 @@
     color: #fff;
     position: absolute;
     top: 150px;
+    left: 10px;
     padding: 10px;
     margin: 10px 10px 0 10px;
 }
-#buttons{
+
+#list{
     display: inline-block;
     position: absolute;
+    left: 10px;
     top: 175px;
     width: 300px;
     background-color: #ffffff50;
@@ -21,22 +24,24 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-#buttons *{
-    /* padding: 2px; */
+
+#list *{
     width: 100%;
     text-align: center;
     color: #000;
     text-decoration: none;
     
 }
-#buttons div:first-child{
+
+#list div:first-child{
     border: none;
 }
-#buttons > *{
+
+#list > *{
     border-top: 1px #000 solid;
 }
 
-#buttons div{
+#list div{
     margin: 0 10% !important;
     width: 80%;
 }

@@ -932,25 +932,26 @@ function Home(){
         <div>
             <Header text="Strona główna"/>
             
-            <h3 id="button_title">Wybierz klasę / nauczyciela</h3>
+            <h3 id="list_title">Wybierz klasę / nauczyciela</h3>
             
-            <div id="buttons">
-                
+            {/* LISTA KLAS I NAUCZYCIELI */}
+            <div id="list"> 
                  {classes.map((item, id) => (
                 <div key={id}>
                      <a type="submit" href={item[1]}> {item[0]} </a>
                      <br/>
                 </div>
-               
                 ))}
             </div>
             
             <br/>
 
+            {/* LOGOUT BTTN */}
             <Link className={"link"} id="logout" to={"/"}>
                 <button>"Wyloguj lol"</button>
             </Link>
 
+            {/* PLAN */}
             <Plan data={data} id="planbox"/>
 
             <Footer/>
