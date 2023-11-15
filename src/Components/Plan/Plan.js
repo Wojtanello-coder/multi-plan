@@ -7,7 +7,9 @@ function Plan(props){
     console.log(props.data)
 
     const newArr = [];
-    while(props.data.lesson.length) newArr.push(props.data.lesson.splice(0,props.data.dayLength));
+    if(props.data.lesson){
+        while(props.data.lesson.length) newArr.push(props.data.lesson.splice(0,props.data.dayLength));
+    }
 
 
     // skraca stringa
