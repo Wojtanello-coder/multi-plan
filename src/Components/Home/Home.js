@@ -36,36 +36,39 @@ function Home(){
         }
     }
     return(
-        <div>
+        <div id="homediv">
 
             <Header text="Strona główna"/>
             
-            <h3 id="button_title">Wybierz klasę / nauczyciela</h3>
+            {/* WYBOR KLASY ALBO NAUCZYCIELA */}
+            <div id="picklist">
+                <h3 id="button_title">Wybierz klasę / nauczyciela</h3>
             
-            <div id="buttons">
-                
-                {classes.map((item, id) => (
-                <div key={id}>
-                     <button type="submit" href={item[1]} onClick={(event) => fetchPlanUrl(item[1], event)} > {item[0]} </button>
-                     <br/>
+                <div id="buttons">
+                    {classes.map((item, id) => (
+                    <div key={id}>
+                         <button href={item[1]} onClick={(event) => fetchPlanUrl(item[1], event)} > {item[0]} </button>
+                    </div>
+                    ))}
                 </div>
-                
-                ))}
             </div>
+            
             
             <br/>
 
+            {/* PLAN LEKCJI */}
             <div id="planbox">
                 <Plan data={data}/>
             </div>
 
             <br/>
 
+            {/* WYLOGOWANIE */}
             <Link className={"link"} id="logout" to={"/"}>
                 <button>"Wyloguj lol"</button>
             </Link>
 
-            {/* <Footer/> */}
+            <Footer/>
 
         </div>
     );
