@@ -1,18 +1,17 @@
 @media only screen and (min-width: 1200px){
     #picklist{
-        display: inline-block;
-        position: relative;
-        /* float: left; */
-        top: 50px;
-        left: 25px;
+        float: left;
+        margin-top: 50px !important;
+        margin-left: 25px !important;
         width: 300px;
     }
-    #planbox{
-        display: inline-block;
-        /* float: right; */
-        background-color: violet;
+    #plan{
+        margin-top: 25px !important;
+        margin-right: 25px !important;
+        float: right;
     }
 }
+
 @media only screen and (max-width: 1199px){
     #picklist{
         display: block;
@@ -20,8 +19,9 @@
         min-width: 300px;
         margin: 50px 30vw 0 30vw !important;
     }
-    #planbox{
+    #plan{
         display: block; 
+        width: 100vw;
         background-color: violet;
     }
     .link{
@@ -30,9 +30,11 @@
     }
 }
 
+#homediv{
+    min-height: calc(100vh-160px);
+}
 
-
-#list_title{
+#button_title{
     text-align: center;
     width: 100%;
     height: 25px;
@@ -40,7 +42,7 @@
     color: #fff;
     margin: 10px 10px 0 10px;
 }
-#list{
+#buttons{
     display: inline-block;
     width: 100%;
     background-color: #ffffff50;
@@ -50,7 +52,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-#list *{
+#buttons *{
     /* padding: 2px; */
     width: 100%;
     text-align: center;
@@ -58,14 +60,11 @@
     text-decoration: none;
     
 }
-#list div:first-child{
+#buttons div:first-child{
     border: none;
 }
-#list > *{
-    border-top: 1px #000 solid;
-}
 
-#list div{
+#buttons div{
     margin: 0 10% !important;
     width: 80%;
 }

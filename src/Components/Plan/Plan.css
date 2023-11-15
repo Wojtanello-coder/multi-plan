@@ -3,20 +3,9 @@
     margin: 0 !important;
 }
 
-@media only screen and (min-width: 1000px){
-    #plan{
-        position: absolute;
-        top: 120px;
-        right: 5px;
-        padding: 10px;
-        margin: 10px;
-        /* background-color: #000; */
-        /* width: 70vw; */
-        /* height: 600px; */
-    }
-}
 
 #plan{
+    background-color: #ffffff50;
     border: 2px black solid;
 }
 #plan *{
