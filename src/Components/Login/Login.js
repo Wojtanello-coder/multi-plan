@@ -15,9 +15,8 @@ function Login(props){
         let pass = document.getElementById('login_password').value;
         //secret password
         let password = "qwe";
-        console.log("PASSWORD: ", pass);
-
         if(pass === "") document.getElementById('error').textContent = "Podaj hasło >:(";
+        else if(pass !== password) document.getElementById('error').textContent = "Błędne hasło :("
         if(pass === password){
             //send to root
             setLogged(true);

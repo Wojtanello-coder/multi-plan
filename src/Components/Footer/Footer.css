@@ -35,6 +35,5 @@
 img{
     height: 50px;
     float: right;
-    position: relative;
-    right: 10px;
+    margin-right: 50px !important;
 }

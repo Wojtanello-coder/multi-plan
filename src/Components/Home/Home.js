@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "./Home.css";
@@ -13,6 +12,8 @@ function Home(){
 
     const[footer, changeFooter] = useState("static");
 
+
+    // fetchowanie z bazy
     useEffect(() => {
         try{
             fetch("http://localhost:4001")
@@ -25,6 +26,7 @@ function Home(){
         }
     }, []);
 
+    //fetchowanie url planu lekcji
     const fetchPlanUrl = (planUrl, event) => {
         
         try{
@@ -41,7 +43,7 @@ function Home(){
     return(
         <div id="homediv">
 
-            <Header text="Strona główna"/>
+            <Header text="Scraper"/>
             
             {/* WYBOR KLASY ALBO NAUCZYCIELA */}
             <div id="picklist">

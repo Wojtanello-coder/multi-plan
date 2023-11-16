@@ -20,3 +20,11 @@
   padding: 0 25px;
   height: 20px;
 }
+#error{
+  color: red;
+  background-color: #ff000010;
+  padding: 10px !important;
+  border-radius: 10px;
+  position: relative;
+  top: 20px;
+}

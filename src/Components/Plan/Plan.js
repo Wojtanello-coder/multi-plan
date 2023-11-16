@@ -21,7 +21,7 @@ function Plan(props){
                  result += x[i];
                  flag = false;
             }
-            if(x[i] == " ") flag = true;
+            if(x[i] === " ") flag = true;
         }
 
         return result;
@@ -29,9 +29,9 @@ function Plan(props){
 
     // wypis grupy
     function Grouper(x){
-        if(x == "1. Grupa") return "g1";
-        if(x == "2. Grupa") return "g2";
-        if(x == "Cała klasa") return "ck";
+        if(x === "1. Grupa") return "g1";
+        if(x === "2. Grupa") return "g2";
+        if(x === "Cała klasa") return "ck";
         else return "";
     }
 
@@ -47,8 +47,8 @@ function Plan(props){
                             {row.map((cell, id) => (
                                 <td key={id}>
                                     {/* dont display empty cells */}
-                                    {cell.length==0?(<div/>):(
-                                    cell.length==4?(
+                                    {cell.length===0?(<div/>):(
+                                    cell.length===4?(
 
                                         // JEDNA GRUPA
                                         <div className="cell_border">
