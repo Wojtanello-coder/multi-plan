@@ -11,6 +11,8 @@ function Home(){
     const [classes, setClass] = useState([]);
     const [data, setData] = useState({});
 
+    const[footer, changeFooter] = useState("static");
+
     useEffect(() => {
         try{
             fetch("http://localhost:4001")
@@ -29,6 +31,7 @@ function Home(){
             fetch("http://localhost:4001/plan/"+planUrl.substring(1,planUrl.indexOf("=")) + "/" + planUrl.substring(planUrl.length-16))
             .then(res => res.json())
             .then((data) => setData(data));
+            changeFooter("dynamic")
             // .then(res => res.json())
             // .then((data) => setInfo(data));
         } catch (e) {
@@ -68,7 +71,7 @@ function Home(){
                 <button>"Wyloguj lol"</button>
             </Link>
 
-            <Footer/>
+            <Footer type={footer}/>
 
         </div>
     );
