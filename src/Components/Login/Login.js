@@ -41,7 +41,7 @@ function Login(props){
             
 
 
-            <Footer type="static"/>
+            <Footer type="static" logged={false}/>
         </div>
     )
 }

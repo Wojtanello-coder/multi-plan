@@ -66,12 +66,7 @@ function Home(){
 
             <br/>
 
-            {/* WYLOGOWANIE */}
-            <Link className={"link"} id="logout" to={"/"}>
-                <button>"Wyloguj lol"</button>
-            </Link>
-
-            <Footer type={footer}/>
+            <Footer type={footer} logged={true}/>
 
         </div>
     );
