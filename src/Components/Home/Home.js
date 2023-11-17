@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 import Plan from "../Plan/Plan";
 import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 
 function Home(){
 
@@ -43,7 +42,7 @@ function Home(){
     return(
         <div id="homediv">
 
-            <Header text="Scraper"/>
+            <Header text="Scraper" logged ="1"/>
             
             {/* WYBOR KLASY ALBO NAUCZYCIELA */}
             <div id="picklist">
@@ -65,10 +64,6 @@ function Home(){
             <div id="planbox">
                 <Plan data={data}/>
             </div>
-
-            <br/>
-
-            <Footer type={footer} logged={true}/>
 
         </div>
     );

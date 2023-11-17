@@ -1,19 +1,47 @@
-/* HEIGTH = 110px */
-
 #header{
     width: 100%;
     height: 80px;
-    padding: 10px 0;
+    padding: 10px 0 !important;
     background-color: #404040;
-    color: #fff;  
-    text-align: center;
+    color: #fff; 
 }
 h1{
+    text-align: center;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
     text-shadow: 5px 5px 5px #000000;
 }
+.hsubtext{
+    padding-left: 50px !important;
+}
+
+.logout{
+    width: 100vw;
+    height: 20px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.logout button{
+    width: 100px;
+}
+
+.image{
+    height: 80px;
+    width: auto;
+    float: right;
+    position: relative;
+    top: -90px;
+    right: 50px;
+}
+
+img{
+    height: 100%;
+    
+}
+
 #ybar{
     width: 100vw;
     height: 10px;
