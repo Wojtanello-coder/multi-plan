@@ -35,6 +35,21 @@ function Plan(props){
         else return "";
     }
 
+    let i = 1;
+    function Day(x){
+        if(x == 1) return "Pon";
+        if(x == 2) return "Wt";
+        if(x == 3) return "Śr";
+        if(x == 4) return "Czw";
+        if(x == 5) return "Pt";
+        else return "Idk tbh"
+    }
+    let j = 0;
+
+    function jajo(x){
+        return x;
+    }
+
     return(
         <div id="plan">
  
@@ -44,10 +59,24 @@ function Plan(props){
                     
                     {newArr.map((row, id) => (
                         <tr key={id}>
+                            <td className="cell_border">
+                                <div className="day_cell plan_cell">
+                                    {Day(i)}
+                                    <span className="idk">
+                                        {i++}
+                                    </span>
+                                    
+                                </div>
+                            </td>
                             {row.map((cell, id) => (
+                                
                                 <td key={id}>
-                                    {/* dont display empty cells */}
-                                    {cell.length===0?(<div/>):(
+                                   
+                                    {cell.length===0?(
+                                    <div className="cell_border">
+                                        <div className="plan_cell"/>
+                                    </div>
+                                        ):(
                                     cell.length===4?(
 
                                         // JEDNA GRUPA
