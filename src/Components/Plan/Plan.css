@@ -65,8 +65,10 @@
 }
 
 .idk{
-    display: none   ;
+    visibility: hidden;
 }
-.plan_hour{
+#hours{
     height: 20px;
+    width: 100%;
+    background-color: #00000020;
 }

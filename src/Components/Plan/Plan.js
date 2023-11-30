@@ -4,12 +4,21 @@ import "./Plan.css";
 import { useState } from "react";
 
 function Plan(props){
-    console.log(props.data)
+    // console.log(props.data)
+
+    let hoursvis = false;
 
     const newArr = [];
     if(props.data.lesson){
         while(props.data.lesson.length) newArr.push(props.data.lesson.splice(0,props.data.dayLength));
     }
+    const dayLength = props.data.dayLength;
+    let hourstab = [];
+    for(let i = 0; i < dayLength; i++){
+        hourstab[i] = i;
+    }
+    console.log(hourstab);
+
 
 
     // skraca stringa
@@ -44,18 +53,39 @@ function Plan(props){
         if(x == 5) return "Pt";
         else return "Idk tbh"
     }
-    let j = 0;
 
-    function jajo(x){
-        return x;
+    function HourTime(x){
+        if(x == 0) return "6:55 - 7:40";
+        if(x == 1) return "7:45 - 8:30";
+        if(x == 2) return "8:40 - 9:25";
+        if(x == 3) return "9:35 - 10:20";
+        if(x == 4) return "10:30 - 11:15";
+        if(x == 5) return "11:30 - 12:15";
+        if(x == 6) return "12:25 - 13:10";
+        if(x == 7) return "13:20 - 14:05";
+        if(x == 8) return "14:15 - 15:00";
+        if(x == 9) return "15:05 - 15:50";
+        if(x == 10) return "15:55 - 16:40";
+        else return "16:45 - 17:30";
     }
-
+    
     return(
         <div id="plan">
+            {hoursvis = true}
  
             {/* {JSON.stringify(props.data)} */}
             <table>
                 <tbody>
+                    <tr id="hours" className={hoursvis?(""):("idk")}>
+                        <td >Godziny:</td>
+                        {hourstab.map((i) => (
+                            
+                            <td className="cell_border">
+                                <div>{i}</div>
+                                {HourTime(i)}
+                            </td>
+                        ))}
+                    </tr>
                     
                     {newArr.map((row, id) => (
                         <tr key={id}>
