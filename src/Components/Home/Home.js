@@ -51,7 +51,7 @@ function Home(){
                 <div id="buttons">
                     {classes.map((item, id) => (
                     <div key={id}>
-                         <button href={item[1]} onClick={(event) => fetchPlanUrl(item[1], event)} > {item[0]} </button>
+                         <button href={item.link} onClick={(event) => fetchPlanUrl(item.link, event)} > {item.name} </button>
                     </div>
                     ))}
                 </div>
@@ -62,7 +62,7 @@ function Home(){
 
             {/* PLAN LEKCJI */}
             <div id="planbox">
-                <Plan data={data}/>
+                <Plan data={data.data}/>
             </div>
 
         </div>
