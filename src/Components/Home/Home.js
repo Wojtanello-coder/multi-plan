@@ -29,7 +29,8 @@ function Home(){
     const fetchPlanUrl = (planUrl, event) => {
         
         try{
-            fetch("http://localhost:4001/plan/"+planUrl.substring(1,planUrl.indexOf("=")) + "/" + planUrl.substring(planUrl.length-16))
+            //fetch("http://localhost:4001/plan/"+planUrl.substring(1,planUrl.indexOf("=")) + "/" + planUrl.substring(planUrl.length-16))
+            fetch("http://localhost:4001/day/" + planUrl.substring(1,planUrl.indexOf("=")) + "/" + planUrl.substring(planUrl.length-16))
             .then(res => res.json())
             .then((data) => setData(data));
             changeFooter("dynamic")

@@ -129,11 +129,11 @@ function Plan(props){
                                             <div className="plan_cell">
                                                 <div className="cell_header">
                                                     {/* grupy */}
-                                                    <p className="group">{Shorten(cell[0].group)}</p>
+                                                    <p className="group">{Grouper(cell[0].room)}</p>
                                                     {/* Nauczyciel */}
-                                                    <p className="teacher">{cell[0].name}</p>
+                                                    <p className="teacher">{Shorten(cell[0].group)}</p>
                                                     {/* sala */}
-                                                    <p className="classroom">{Grouper(cell[0].room)}</p>
+                                                    <p className="classroom">{cell[0].name}</p>
                                                 </div>
                                                 <div className="cell_body1">
                                                     {/* przedmiot */}
@@ -149,11 +149,11 @@ function Plan(props){
                                             <div className="plan_cell_double double1">
                                                 <div className="cell_header">
                                                     {/* grupa */}
-                                                    <p className="group">{Shorten(cell[0].group)}</p>
+                                                    <p className="group">{Grouper(cell[0].room)}</p>
                                                     {/* nauczyciel */}
-                                                    <p className="teacher">{cell[0].name}</p>
+                                                    <p className="teacher">{Shorten(cell[0].group)}</p>
                                                     {/* sala */}
-                                                    <p className="classroom">{Grouper(cell[0].room)}</p>
+                                                    <p className="classroom">{cell[0].name}</p>
                                                 </div>
                                                 <div className="cell_body2">
                                                     {/* przedmiot */}
@@ -166,11 +166,11 @@ function Plan(props){
                                                 
                                                 <div className="cell_header">
                                                     {/* grupa */}
-                                                    <p className="group">{Shorten(cell[1].group)}</p>
+                                                    <p className="group">{Grouper(cell[1].room)}</p>
                                                     {/* Nauczyciel */}
-                                                    <p className="teacher">{cell[1].name}</p>
+                                                    <p className="teacher">{Shorten(cell[1].group)}</p>
                                                     {/* sala */}
-                                                    <p className="classroom">{Grouper(cell[1].room)}</p>
+                                                    <p className="classroom">{cell[1].name}</p>
                                                 </div>
                                                 <div className="cell_body2">
                                                     {/* przedmiot */}
