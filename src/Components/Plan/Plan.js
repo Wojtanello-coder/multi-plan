@@ -154,8 +154,7 @@ function Plan(props){
                                                 <div className="cell_header">
                                                     {/* grupa */}
                                                     <p className="group">{Grouper(cell[0].room)}</p>
-                                                    {/* nauczyciel */}
-                                                    <p className="teacher">{Shorten(cell[0].group)}</p>
+                                                    
                                                     {/* sala */}
                                                     <p className="classroom">{cell[0].name}</p>
                                                 </div>
@@ -163,7 +162,10 @@ function Plan(props){
                                                     {/* przedmiot */}
                                                     <p className="subj">{Shorten(cell[0].subject)}</p>
                                                 </div>
-                                            
+                                                <div className="cell_body3">
+                                                    {/* Nauczyciel */}
+                                                    <p className="teacher">{Shorten(cell[0].group)}</p>
+                                                </div> 
                                                 
                                             </div>
                                             <div className="plan_cell_double double2">
@@ -171,8 +173,6 @@ function Plan(props){
                                                 <div className="cell_header">
                                                     {/* grupa */}
                                                     <p className="group">{Grouper(cell[1].room)}</p>
-                                                    {/* Nauczyciel */}
-                                                    <p className="teacher">{Shorten(cell[1].group)}</p>
                                                     {/* sala */}
                                                     <p className="classroom">{cell[1].name}</p>
                                                 </div>
@@ -180,6 +180,10 @@ function Plan(props){
                                                     {/* przedmiot */}
                                                     <p className="subj">{Shorten(cell[1].subject)}</p>
                                                 </div>
+                                                <div className="cell_body3">
+                                                    {/* Nauczyciel */}
+                                                    <p className="teacher">{Shorten(cell[1].group)}</p>
+                                                </div> 
                                             </div>
                                         </div>  
 

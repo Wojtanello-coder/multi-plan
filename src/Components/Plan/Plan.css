@@ -39,29 +39,43 @@
     padding: 50px;
 }
 
-
 .cell_header{
-    height: 20px;
+    font-size: smaller;
     background-color: #00000020;
     display: flex;
     justify-content: space-around;
 }
+
+.classroom{
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+.classroom:hover {
+    overflow: visible;
+    white-space:inherit
+}
+
 .cell_body1{
-    height: 60px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
 }
+
 .cell_body2{
-    height: 30px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: smaller;
 }
 
 .cell_body3{
-    height: 20px;
+    font-size: smaller;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,3 +96,11 @@
     width: 100%;
     background-color: #00000020;
 }
+
+div.subj {
+    white-space: nowrap; 
+    width: 50px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    border: 1px solid #000000;
+  }
