@@ -1,7 +1,6 @@
 import {useNavigate} from 'react-router-dom';
 
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import { useState } from 'react';
 import './Login.css';
  
@@ -15,9 +14,8 @@ function Login(props){
         let pass = document.getElementById('login_password').value;
         //secret password
         let password = "qwe";
-        console.log("PASSWORD: ", pass);
-
         if(pass === "") document.getElementById('error').textContent = "Podaj hasło >:(";
+        else if(pass !== password) document.getElementById('error').textContent = "Błędne hasło :("
         if(pass === password){
             //send to root
             setLogged(true);
@@ -28,7 +26,7 @@ function Login(props){
 
     return(
         <div>
-            <Header text="Zaloguj się"/>
+            <Header text="Zaloguj się" logged="0"/>
 
             <div id='form'>
                 <div>
@@ -38,10 +36,6 @@ function Login(props){
                 </div>
                 
             </div>
-            
-
-
-            <Footer/>
         </div>
     )
 }

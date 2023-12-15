@@ -24,14 +24,6 @@
         width: 100vw;
         background-color: violet;
     }
-    .link{
-        display: block;
-        /* TY KURWO GUZIKOWSKA */
-    }
-}
-
-#homediv{
-    min-height: calc(100vh-160px);
 }
 
 #button_title{
@@ -69,6 +61,6 @@
     width: 80%;
 }
 
-.link{
-    text-decoration: none;
+#root {
+    background-image: url('wp9637255.png');
 }

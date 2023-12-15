@@ -6,7 +6,8 @@
 
 #plan{
     background-color: #ffffff50;
-    border: 2px black solid;
+    /* border: 2px black solid; */
+    overflow-x: auto;
 }
 #plan *{
     border-collapse: collapse;
@@ -16,12 +17,13 @@
     font-size: 12px;
     background-color: white;
     height: 100px;
-    width: 80px;
+    /* width: 70px; */
+    
 }
 .plan_cell_double{
     font-size: 12px;
     height: 50px;
-    width: 80px;
+    /* width: 70px; */
 }
 .double1{
     background-color: whitesmoke;
@@ -33,26 +35,72 @@
 .cell_border{
     border: 1px black solid;
     border-collapse: collapse;
+    width: 140px;
+    padding: 50px;
 }
 
-
 .cell_header{
-    height: 20px;
+    font-size: smaller;
     background-color: #00000020;
     display: flex;
     justify-content: space-around;
 }
+
+.classroom{
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+.classroom:hover {
+    overflow: visible;
+    white-space:inherit
+}
+
 .cell_body1{
-    height: 60px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
 }
+
 .cell_body2{
-    height: 30px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+}
+
+.cell_body3{
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.day_cell{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.idk{
+    visibility: hidden;
+}
+#hours{
+    height: 20px;
+    width: 100%;
+    background-color: #00000020;
+}
+
+div.subj {
+    white-space: nowrap; 
+    width: 50px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    border: 1px solid #000000;
+  }
