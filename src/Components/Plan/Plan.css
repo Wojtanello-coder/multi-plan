@@ -17,13 +17,13 @@
     font-size: 12px;
     background-color: white;
     height: 100px;
-    width: 70px;
+    /* width: 70px; */
     
 }
 .plan_cell_double{
     font-size: 12px;
     height: 50px;
-    width: 70px;
+    /* width: 70px; */
 }
 .double1{
     background-color: whitesmoke;
@@ -35,6 +35,8 @@
 .cell_border{
     border: 1px black solid;
     border-collapse: collapse;
+    width: 140px;
+    padding: 50px;
 }
 
 
@@ -56,6 +58,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.cell_body3{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
 }
 
 .day_cell{

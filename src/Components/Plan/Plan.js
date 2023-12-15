@@ -80,8 +80,9 @@ function Plan(props){
             if(x == 8) return "14:15 - 15:00";
             if(x == 9) return "15:05 - 15:50";
             if(x == 10) return "15:55 - 16:40";
+            return "16:45 - 17:30";
         }
-        else return "16:45 - 17:30";
+        else return "6:55 - 7:40";
     }
     
     return(
@@ -130,15 +131,18 @@ function Plan(props){
                                                 <div className="cell_header">
                                                     {/* grupy */}
                                                     <p className="group">{Grouper(cell[0].room)}</p>
-                                                    {/* Nauczyciel */}
-                                                    <p className="teacher">{Shorten(cell[0].group)}</p>
                                                     {/* sala */}
                                                     <p className="classroom">{cell[0].name}</p>
                                                 </div>
                                                 <div className="cell_body1">
                                                     {/* przedmiot */}
                                                     <p className="subj">{Shorten(cell[0].subject)}</p>
-                                                </div>          
+                                                    
+                                                </div> 
+                                                <div className="cell_body3">
+                                                    {/* Nauczyciel */}
+                                                    <p className="teacher">{Shorten(cell[0].group)}</p>
+                                                </div>         
                                             </div>
                                         </div>
                                         
